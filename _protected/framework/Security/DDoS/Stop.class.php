@@ -35,7 +35,7 @@ final class Stop
         $oCookie = new Cookie;
 
         if (!$oCookie->exists(static::COOKIE_NAME)) {
-            $oCookie->set(static::COOKIE_NAME, 1, self::COOKIE_LIFETIME);
+            $oCookie->set(static::COOKIE_NAME, '1', self::COOKIE_LIFETIME);
         } else {
             $oCookie->set(static::COOKIE_NAME, ($oCookie->get(static::COOKIE_NAME) + 1));
         }
